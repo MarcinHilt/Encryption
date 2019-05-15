@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     String outputString , login="Marcin" , password="Test" ;
     String userKey="";
     String AES = "AES";
-    String keyAp = "To jest klucz taki";
+    final String keyAp = "To jest klucz taki";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,17 +77,10 @@ public class MainActivity extends AppCompatActivity {
         return encryptedValue;
     }
     private  String generateUserKey(String login, String password) {
-        String keyApp="";
         String login3 = login.substring(0, 3);
         String password3 = password.substring(password.length() - 3);
-        try {
-           keyApp= generateKey(keyAp).toString();
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        String userKey = login3 + password3+keyApp;
+       
+        String userKey = login3 + password3+keyAp;
 
         return userKey;
     }
