@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     String outputString , login="Marcin" , password="Test" ;
     String userKey="";
     String AES = "AES";
-    final String keyAp = "To jest klucz taki";
+    final String keyAp = "HaG3EA6LPehczZzTyckR";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
